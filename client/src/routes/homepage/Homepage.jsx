@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./homepage.css";
 import { TypeAnimation } from "react-type-animation";
 import { useState } from "react";
+import Footers from "../../components/footers/Footers";
 
 const Homepage = () => {
   const [typingStatus, setTypingStatus] = useState("human1");
@@ -11,10 +12,9 @@ const Homepage = () => {
       <img src="/orbital.png" alt="" className="orbital" />
       <div className="left">
         <h1>NOVA AI</h1>
-        <h2>Supercharge your creativity and productivity</h2>
+        <h2>Next-gen Orbit of Visionary Artificial Intelligence Technology</h2>
         <h3>
-          Welcome to NOVA AI – revolutionizing creativity and productivity with
-          cutting-edge AI solutions. Unleash your potential today!
+          Welcome to NOVA – Revolutionizing the world transformed by the seamless integration of Artificial Intelligence!
         </h3>
         <Link to="/dashboard">Get Started</Link>
       </div>
@@ -67,14 +67,15 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-      <div className="terms">
+      {/* <div className="terms">
         <img src="/logo-nova.png" alt="" />
         <div className="links">
           <Link to="/">Terms of Service</Link>
           <span></span>
           <Link to="/">Privacy Policy</Link>
         </div>
-      </div>
+      </div> */}
+      <Footers> </Footers>
     </div>
   );
 };

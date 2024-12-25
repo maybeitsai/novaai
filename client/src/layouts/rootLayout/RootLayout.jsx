@@ -17,7 +17,7 @@ const RootLayout = () => {
         <div className="rootLayout">
           <header>
             <Link to="/" className="logo">
-              <img src="/logo-nova.png" alt="" />
+              <img className="logonova" src="/logo-nova.png" alt="" />
               {/* <span className="about-us">About Us</span> */}
             </Link>
             <div className="user">
