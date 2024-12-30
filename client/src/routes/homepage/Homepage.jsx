@@ -14,7 +14,8 @@ const Homepage = () => {
         <h1>NOVA AI</h1>
         <h2>Next-gen Orbit of Visionary Artificial Intelligence Technology</h2>
         <h3>
-          Welcome to NOVA – Revolutionizing the world transformed by the seamless integration of Artificial Intelligence!
+          Welcome to NOVA – Revolutionizing the world transformed by the
+          seamless integration of Artificial Intelligence!
         </h3>
         <Link to="/dashboard">Get Started</Link>
       </div>
@@ -28,32 +29,51 @@ const Homepage = () => {
             <img
               src={
                 typingStatus === "human1"
-                  ? "/human1.jpeg"
+                  ? "/mrai.png"
                   : typingStatus === "human2"
-                  ? "/human2.jpeg"
+                  ? "/mrai2.png"
                   : "bot.png"
               }
               alt=""
             />
             <TypeAnimation
               sequence={[
-                // Same substring at the start will only be typed out once, initially
-                "Human:We produce food for Mice",
+                "Can NOVA really help optimize business strategies?",
                 2000,
                 () => {
                   setTypingStatus("bot");
                 },
-                "Bot:We produce food for Hamsters",
+                "Absolutely! NOVA leverages predictive analytics to boost efficiency and maximize profits",
                 2000,
                 () => {
                   setTypingStatus("human2");
                 },
-                "Human2:We produce food for Guinea Pigs",
+                "What about personal productivity?",
                 2000,
                 () => {
                   setTypingStatus("bot");
                 },
-                "Bot:We produce food for Chinchillas",
+                "NOVA AI can automate repetitive tasks, organize your schedule, and provide intelligent reminders",
+                2000,
+                () => {
+                  setTypingStatus("human1");
+                },
+                "How does NOVA ensure data security?",
+                2000,
+                () => {
+                  setTypingStatus("bot");
+                },
+                "With state-of-the-art encryption and AI-driven threat detection, your data is always protected",
+                2000,
+                () => {
+                  setTypingStatus("human2");
+                },
+                "Impressive! Can NOVA support innovation in tech development?",
+                2000,
+                () => {
+                  setTypingStatus("bot");
+                },
+                "Absolutely! NOVA provides intelligent solutions for coding, debugging, and even generating creative ideas for new projects",
                 2000,
                 () => {
                   setTypingStatus("human1");
@@ -67,14 +87,6 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-      {/* <div className="terms">
-        <img src="/logo-nova.png" alt="" />
-        <div className="links">
-          <Link to="/">Terms of Service</Link>
-          <span></span>
-          <Link to="/">Privacy Policy</Link>
-        </div>
-      </div> */}
       <Footers> </Footers>
     </div>
   );

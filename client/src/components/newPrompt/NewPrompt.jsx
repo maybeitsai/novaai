@@ -113,7 +113,7 @@ const NewPrompt = ({ data }) => {
   }, [add, data.history]);
 
   return (
-    <>
+    <div className="newPrompt">
       {/* ADD NEW CHAT */}
       {img.isLoading && <div className="">Loading...</div>}
       {img.dbData?.filePath && (
@@ -139,7 +139,7 @@ const NewPrompt = ({ data }) => {
           <img src="/arrow.png" alt="" />
         </button>
       </form>
-    </>
+    </div>
   );
 };
 

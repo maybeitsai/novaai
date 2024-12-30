@@ -10,13 +10,12 @@
     background-color: #ddd;
     opacity: 0.1;
     border-radius: 5px;
-    margin: 20px 0px;
   }
 
   .title {
-    padding-top: 32px;
+    padding-top: 16px;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 10px;
     margin-bottom: 10px;
   }
 

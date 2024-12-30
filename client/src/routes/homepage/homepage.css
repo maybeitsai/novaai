@@ -3,7 +3,7 @@
   align-items: center;
   gap: 100px;
   height: 100vh;
-  overflow:auto;
+  overflow: auto;
   padding: 2rem;
   scrollbar-width: none; /* For Firefox */
   -ms-overflow-style: none; /* For Internet Explorer and Edge */
@@ -37,7 +37,6 @@ html::-webkit-scrollbar {
   animation: floatBackground 20s ease-in-out infinite alternate;
 }
 
-
 .homepage::before {
   background: radial-gradient(circle, #60a5fa 0%, transparent 70%);
   top: -300px;
@@ -50,18 +49,18 @@ html::-webkit-scrollbar {
   right: -300px;
 }
 
-.left {
-  flex: 1;
+.homepage .left {
+  flex: 1.5;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 16px;
   text-align: center;
   position: relative;
   animation: fadeInUp 1s ease-out;
 }
-.left h1 {
+.homepage .left h1 {
   font-size: 128px;
   background: linear-gradient(135deg, #60a5fa 0%, #818cf8 100%);
   background-clip: text;
@@ -72,12 +71,12 @@ html::-webkit-scrollbar {
   transition: all 0.3s ease;
 }
 
-.left h1:hover {
+.homepage .left h1:hover {
   transform: scale(1.02);
   text-shadow: 0 0 60px rgba(96, 165, 250, 0.4);
 }
 
-.left h2 {
+.homepage .left h2 {
   font-size: 32px;
   color: #e2e8f0;
   font-weight: 600;
@@ -85,7 +84,7 @@ html::-webkit-scrollbar {
   animation: fadeInUp 1s ease-out 0.2s forwards;
 }
 
-.left h3 {
+.homepage .left h3 {
   font-weight: 400;
   max-width: 70%;
   color: #94a3b8;
@@ -94,7 +93,7 @@ html::-webkit-scrollbar {
   animation: fadeInUp 1s ease-out 0.4s forwards;
 }
 
-.left a {
+.homepage .left a {
   padding: 16px 32px;
   background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
   color: white;
@@ -108,14 +107,14 @@ html::-webkit-scrollbar {
   animation: fadeInUp 1s ease-out 0.6s forwards;
 }
 
-.left a:hover {
+.homepage .left a:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(59, 130, 246, 0.4);
   background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
 }
 
 /* Right section styles */
-.right {
+.homepage .right {
   flex: 1;
   display: flex;
   align-items: center;
@@ -125,14 +124,14 @@ html::-webkit-scrollbar {
   animation: fadeInRight 1s ease-out 0.4s forwards;
 }
 
-.imgContainer {
+.homepage .right .imgContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(15, 23, 42, 0.6);
   backdrop-filter: blur(20px);
   border-radius: 30px;
-  width: 80%;
+  width: 90%;
   height: 60%;
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -140,11 +139,11 @@ html::-webkit-scrollbar {
   transition: transform 0.3s ease;
 }
 
-.imgContainer:hover {
+.homepage .right .imgContainer:hover {
   transform: translateY(-5px);
 }
 
-.bgContainer {
+.homepage .right .imgContainer .bgContainer {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -154,7 +153,7 @@ html::-webkit-scrollbar {
   border-radius: 30px;
 }
 
-.bg {
+.homepage .right .imgContainer .bgContainer .bg {
   background-image: url("/bg.png");
   opacity: 0.15;
   width: 200%;
@@ -163,7 +162,7 @@ html::-webkit-scrollbar {
   animation: slideBg 15s ease-in-out infinite alternate;
 }
 
-.bot {
+.homepage .right .imgContainer .bot {
   width: 90%;
   height: 90%;
   object-fit: contain;
@@ -171,34 +170,33 @@ html::-webkit-scrollbar {
   filter: drop-shadow(0 0 20px rgba(96, 165, 250, 0.2));
 }
 
-  .chat {
-    position: absolute;
-    bottom: -30px;
-    right: -50px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 20px 30px;
-    background: rgba(30, 41, 59, 0.8);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease-out 0.8s forwards;
-  }
+.homepage .right .imgContainer .chat {
+  position: absolute;
+  bottom: -30px;
+  right: -50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 12px;
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(64px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out 0.8s forwards;
+  font-size: 16px;
+}
 
-  .chat img {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-  }
+.homepage .right .imgContainer .chat img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
 
-
-
-.orbital {
+.homepage .orbital {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -257,7 +255,7 @@ html::-webkit-scrollbar {
   background: radial-gradient(circle, #818cf8 0%, transparent 70%);
 }
 
-.left h1:hover {
+.homepage .left h1:hover {
   transform: scale(1.02);
   text-shadow: 0 0 60px rgba(96, 165, 250, 0.4);
 }
@@ -314,11 +312,11 @@ html::-webkit-scrollbar {
 
 /* Responsive styles */
 @media screen and (max-width: 1280px) {
-  .left h1 {
+  .homepage .left h1 {
     font-size: 96px;
   }
 
-  .chat {
+  .homepage .right .imgContainer .chat {
     right: -20px;
   }
 }
@@ -330,34 +328,34 @@ html::-webkit-scrollbar {
     padding: 40px 20px;
   }
 
-  .left h1 {
+  .homepage .left h1 {
     font-size: 72px;
   }
 
-  .left h3 {
+  .homepage .left h3 {
     max-width: 90%;
   }
 
-  .chat {
+  .homepage .right .imgContainer .chat {
     display: none;
   }
 
-  .imgContainer {
+  .homepage .right .imgContainer {
     width: 90%;
     height: 400px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .left h1 {
+  .homepage .left h1 {
     font-size: 56px;
   }
 
-  .left h2 {
+  .homepage .left h2 {
     font-size: 24px;
   }
 
-  .imgContainer {
+  .homepage .right .imgContainer {
     height: 300px;
   }
 }

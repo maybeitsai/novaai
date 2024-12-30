@@ -1,3 +1,10 @@
+.newPrompt {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  width: 60%;
+  margin: auto;
+}
 .endChat {
   padding-bottom: 100px;
 }

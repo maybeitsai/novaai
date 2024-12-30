@@ -34,11 +34,12 @@ const ChatList = () => {
   return (
     <div className="chatList">
       <span className="title">DASHBOARD</span>
+      <hr />
       <Link to="/dashboard">Create a new Chat</Link>
       <Link to="/">Explore NOVA AI</Link>
       <Link to="/">Contact</Link>
-      <hr />
       <span className="title">RECENT CHATS</span>
+      <hr />  
       <div className="list">
         {isPending
           ? "Loading..."
@@ -56,7 +57,6 @@ const ChatList = () => {
               </div>
             ))}
       </div>
-      <hr />
       <div className="upgrade">
         <img src="/logo-nova.png" alt="" />
         <div className="texts">
